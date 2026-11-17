@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Arya K Ravi · Job search dashboard</title>
+<style>
+:root{--fg:#1f2328;--mut:#59636e;--line:#d0d7de;--bg:#fff;--soft:#f6f8fa}
+@media (prefers-color-scheme:dark){:root{--fg:#e6edf3;--mut:#9198a1;--line:#30363d;--bg:#0d1117;--soft:#151b23}}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 -apple-system,system-ui,Segoe UI,sans-serif;color:var(--fg);background:var(--bg)}
+.wrap{max-width:1080px;margin:0 auto;padding:36px 20px 60px}
+h1{font-size:26px;margin:0 0 4px}.sub{color:var(--mut);margin:0 0 26px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px}
+.card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;background:var(--soft)}
+.n{font-size:32px;font-weight:700;line-height:1.1}.l{color:var(--mut);font-size:13px;margin-top:4px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.bar button{border:1px solid var(--line);background:var(--bg);color:var(--fg);border-radius:999px;padding:5px 12px;cursor:pointer;font-size:13px}
+.bar button.on{background:var(--fg);color:var(--bg)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:720px}th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);background:var(--soft)}
+tr:last-child td{border-bottom:0}td.num{text-align:right;font-variant-numeric:tabular-nums}a{color:#0969da;text-decoration:none}
+a:hover{text-decoration:underline}.pill{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.empty{text-align:center;color:var(--mut);padding:30px}footer{color:var(--mut);font-size:13px;margin-top:22px}
+</style></head><body><div class="wrap">
+<h1>Job search dashboard</h1>
+<p class="sub">Arya K Ravi · Associate Product Manager / Program Manager · Bengaluru or remote ·
+Updated 17 Nov 2026, 16:02 IST · runs automatically Mon–Sat</p>
+<div class="cards"><div class="card"><div class="n" style="color:#1a7f37">0</div><div class="l">Applications sent</div></div><div class="card"><div class="n" style="color:#9a6700">0</div><div class="l">Waiting on Arya</div></div><div class="card"><div class="n" style="color:#0969da">0</div><div class="l">Filled in practice runs</div></div><div class="card"><div class="n" style="color:#1f2328">0</div><div class="l">Matching jobs tracked</div></div></div>
+<div class="bar"><button data-f="all" class="on">All</button></div>
+<div class="tbl"><table><thead><tr><th>Date</th><th>Company</th><th>Role</th><th>Location</th><th>Fit</th><th>Status</th></tr></thead>
+<tbody><tr><td colspan="6" class="empty">No runs yet — the first results appear after the next scheduled run.</td></tr></tbody></table></div>
+<footer>Applications go directly through each company's own careers site. Portfolio:
+<a href="https://akr246.github.io/series/">akr246.github.io/series</a></footer>
+</div><script>
+document.querySelectorAll('.bar button').forEach(b=>b.onclick=()=>{
+document.querySelectorAll('.bar button').forEach(x=>x.classList.toggle('on',x===b));
+document.querySelectorAll('tbody tr[data-s]').forEach(r=>r.style.display=(b.dataset.f==='all'||r.dataset.s===b.dataset.f)?'':'none');});
+</script></body></html>
